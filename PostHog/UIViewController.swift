@@ -31,12 +31,16 @@ import Foundation
                 return root
             } else {
                 // preferred way to get active controller in ios 13+
-                for scene in UIApplication.shared.connectedScenes where scene.activationState == .foregroundActive {
-                    let windowScene = scene as? UIWindowScene
-                    let sceneDelegate = windowScene?.delegate as? UIWindowSceneDelegate
-                    if let target = sceneDelegate, let window = target.window {
-                        return window?.rootViewController
+                if #available(iOS 13.0, *) {
+                    for scene in UIApplication.shared.connectedScenes where scene.activationState == .foregroundActive {
+                        let windowScene = scene as? UIWindowScene
+                        let sceneDelegate = windowScene?.delegate as? UIWindowSceneDelegate
+                        if let target = sceneDelegate, let window = target.window {
+                            return window?.rootViewController
+                        }
                     }
+                } else {
+                    return UIApplication.shared.keyWindow?.rootViewController
                 }
             }
             return nil

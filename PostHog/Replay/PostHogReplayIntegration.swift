@@ -275,14 +275,18 @@
         }
 
         static func getCurrentWindow() -> UIWindow? {
-            guard let activeScene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) else {
-                return nil
+            if #available(iOS 13.0, *) {
+                guard let activeScene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) else {
+                    return nil
+                }
+                
+                guard let window = (activeScene as? UIWindowScene)?.windows.first(where: { $0.isKeyWindow }) else {
+                    return nil
+                }
+                return window
+            } else {
+                return UIApplication.shared.keyWindow
             }
-
-            guard let window = (activeScene as? UIWindowScene)?.windows.first(where: { $0.isKeyWindow }) else {
-                return nil
-            }
-            return window
         }
 
         @objc private func snapshot() {
@@ -333,7 +337,8 @@
 
     private protocol AnyObjectUIHostingViewController: AnyObject {}
 
-    extension UIHostingController: AnyObjectUIHostingViewController {}
+@available(iOS 13.0, *)
+extension UIHostingController: AnyObjectUIHostingViewController {}
 
 #endif
 

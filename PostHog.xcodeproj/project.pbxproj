@@ -45,8 +45,6 @@
 		690FF0E12AEFC59100A0B06B /* PostHogFileBackedQueueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690FF0E02AEFC59100A0B06B /* PostHogFileBackedQueueTest.swift */; };
 		690FF0E32AEFD12900A0B06B /* PostHogConfigTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690FF0E22AEFD12900A0B06B /* PostHogConfigTest.swift */; };
 		690FF0E92AEFD3BD00A0B06B /* PostHogQueueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690FF0E82AEFD3BD00A0B06B /* PostHogQueueTest.swift */; };
-		690FF0EB2AEFF22F00A0B06B /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 690FF0EA2AEFF22F00A0B06B /* Quick */; };
-		690FF0ED2AEFF23300A0B06B /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 690FF0EC2AEFF23300A0B06B /* Nimble */; };
 		690FF0EF2AEFF23D00A0B06B /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 690FF0EE2AEFF23D00A0B06B /* OHHTTPStubsSwift */; };
 		690FF0F12AEFF24200A0B06B /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = 690FF0F02AEFF24200A0B06B /* OHHTTPStubs */; };
 		690FF0F52AF0F06100A0B06B /* PostHogSDKTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690FF0F42AF0F06100A0B06B /* PostHogSDKTest.swift */; };
@@ -111,6 +109,8 @@
 		69F5181A2BAC81FC00F52C14 /* UITextInputTraits+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F518192BAC81FC00F52C14 /* UITextInputTraits+Util.swift */; };
 		69F518382BB2BA0100F52C14 /* PostHogSwizzler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F518372BB2BA0100F52C14 /* PostHogSwizzler.swift */; };
 		69F5183A2BB2BA8300F52C14 /* UIApplicationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F518392BB2BA8300F52C14 /* UIApplicationTracker.swift */; };
+		8F6238582C253DD700E45066 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 8F6238572C253DD700E45066 /* Quick */; };
+		8F62385B2C253EEC00E45066 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 8F62385A2C253EEC00E45066 /* Nimble */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -381,10 +381,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F62385B2C253EEC00E45066 /* Nimble in Frameworks */,
 				690FF0F12AEFF24200A0B06B /* OHHTTPStubs in Frameworks */,
-				690FF0ED2AEFF23300A0B06B /* Nimble in Frameworks */,
 				690FF0EF2AEFF23D00A0B06B /* OHHTTPStubsSwift in Frameworks */,
-				690FF0EB2AEFF22F00A0B06B /* Quick in Frameworks */,
+				8F6238582C253DD700E45066 /* Quick in Frameworks */,
 				3AC745C0296D6FE60025C109 /* PostHog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -775,10 +775,10 @@
 			);
 			name = PostHogTests;
 			packageProductDependencies = (
-				690FF0EA2AEFF22F00A0B06B /* Quick */,
-				690FF0EC2AEFF23300A0B06B /* Nimble */,
 				690FF0EE2AEFF23D00A0B06B /* OHHTTPStubsSwift */,
 				690FF0F02AEFF24200A0B06B /* OHHTTPStubs */,
+				8F6238572C253DD700E45066 /* Quick */,
+				8F62385A2C253EEC00E45066 /* Nimble */,
 			);
 			productName = PostHogTests;
 			productReference = 3AC745BF296D6FE60025C109 /* PostHogTests.xctest */;
@@ -905,9 +905,9 @@
 			);
 			mainGroup = 3AC745AB296D6FE60025C109;
 			packageReferences = (
-				3A867B6E29C1DF73009D0852 /* XCRemoteSwiftPackageReference "Quick" */,
-				3A867B7129C1DFEF009D0852 /* XCRemoteSwiftPackageReference "Nimble" */,
 				3A580B3D29E481F200C5C6F3 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
+				8F6238562C253DD700E45066 /* XCRemoteSwiftPackageReference "Quick" */,
+				8F6238592C253EEC00E45066 /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			productRefGroup = 3AC745B6296D6FE60025C109 /* Products */;
 			projectDirPath = "";
@@ -1358,7 +1358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1420,7 +1420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -1451,7 +1451,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1494,7 +1494,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1935,35 +1935,25 @@
 				minimumVersion = 9.0.0;
 			};
 		};
-		3A867B6E29C1DF73009D0852 /* XCRemoteSwiftPackageReference "Quick" */ = {
+		8F6238562C253DD700E45066 /* XCRemoteSwiftPackageReference "Quick" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Quick/Quick.git";
+			repositoryURL = "https://github.com/tysonkerridge/Quick";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
+				kind = revision;
+				revision = de176385321ad303415c2a3e0f7cdbadff84065a;
 			};
 		};
-		3A867B7129C1DFEF009D0852 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+		8F6238592C253EEC00E45066 /* XCRemoteSwiftPackageReference "Nimble" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Quick/Nimble.git";
+			repositoryURL = "https://github.com/tysonkerridge/Nimble";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 12.0.0;
+				kind = revision;
+				revision = e059623a425587eac671e618b2506a3d58d1a2f7;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		690FF0EA2AEFF22F00A0B06B /* Quick */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3A867B6E29C1DF73009D0852 /* XCRemoteSwiftPackageReference "Quick" */;
-			productName = Quick;
-		};
-		690FF0EC2AEFF23300A0B06B /* Nimble */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3A867B7129C1DFEF009D0852 /* XCRemoteSwiftPackageReference "Nimble" */;
-			productName = Nimble;
-		};
 		690FF0EE2AEFF23D00A0B06B /* OHHTTPStubsSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3A580B3D29E481F200C5C6F3 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
@@ -1973,6 +1963,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3A580B3D29E481F200C5C6F3 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
 			productName = OHHTTPStubs;
+		};
+		8F6238572C253DD700E45066 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F6238562C253DD700E45066 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		8F62385A2C253EEC00E45066 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F6238592C253EEC00E45066 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
